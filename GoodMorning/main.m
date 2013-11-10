@@ -2,7 +2,7 @@
 //  main.m
 //  GoodMorning
 //
-//  Created by Jatin Shah on 9/15/13.
+//  Created by Shodhan Shah on 9/15/13.
 //  Copyright (c) 2013 __MyCompanyName__. All rights reserved.
 //
 

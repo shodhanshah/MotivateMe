@@ -15,22 +15,41 @@
 		AD01A58517E679C900DAD39A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AD01A58417E679C900DAD39A /* AppDelegate.m */; };
 		AD01A58817E679C900DAD39A /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD01A58617E679C900DAD39A /* MainStoryboard.storyboard */; };
 		AD01A58B17E679C900DAD39A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD01A58A17E679C900DAD39A /* ViewController.m */; };
+		AD4CFB4617FFDB9D00A4A0D6 /* buttonImage_1.png in Resources */ = {isa = PBXBuildFile; fileRef = AD4CFB4517FFDB9D00A4A0D6 /* buttonImage_1.png */; };
+		AD9B8DCE1804EAF500F2F8A2 /* small-sunflower.png in Resources */ = {isa = PBXBuildFile; fileRef = AD9B8DCD1804EAF500F2F8A2 /* small-sunflower.png */; };
+		AD9B8DD0180645F700F2F8A2 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD9B8DCF180645F700F2F8A2 /* Social.framework */; };
+		AD9D3DB517FA694D004AC30A /* BGSets.plist in Resources */ = {isa = PBXBuildFile; fileRef = AD9D3DB417FA694D004AC30A /* BGSets.plist */; };
+		AD9D3DB717FBAE01004AC30A /* clouds_water.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AD9D3DB617FBAE01004AC30A /* clouds_water.jpg */; };
+		ADB20B38182F4286009800D8 /* MotivateMe-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ADB20B37182F4286009800D8 /* MotivateMe-Info.plist */; };
+		ADF540DC17ED544300D8945B /* QuoteList.plist in Resources */ = {isa = PBXBuildFile; fileRef = ADF540DB17ED544300D8945B /* QuoteList.plist */; };
+		ADF540E617F6827800D8945B /* rainbow.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ADF540E317F6827800D8945B /* rainbow.jpg */; };
+		ADF540E717F6827800D8945B /* sunrise.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ADF540E417F6827800D8945B /* sunrise.jpg */; };
+		ADF540E817F6827800D8945B /* two_birds_flying.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ADF540E517F6827800D8945B /* two_birds_flying.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		AD01A57017E679C900DAD39A /* GoodMorning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoodMorning.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD01A57017E679C900DAD39A /* MotivateMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MotivateMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD01A57417E679C900DAD39A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		AD01A57617E679C900DAD39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		AD01A57817E679C900DAD39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		AD01A57C17E679C900DAD39A /* GoodMorning-Info.plist */ = {isa = PBXFileReference; path = "GoodMorning-Info.plist"; sourceTree = "<group>"; };
 		AD01A57E17E679C900DAD39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		AD01A58017E679C900DAD39A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		AD01A58217E679C900DAD39A /* GoodMorning-Prefix.pch */ = {isa = PBXFileReference; path = "GoodMorning-Prefix.pch"; sourceTree = "<group>"; };
-		AD01A58317E679C900DAD39A /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		AD01A58217E679C900DAD39A /* MotivateMe-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MotivateMe-Prefix.pch"; sourceTree = "<group>"; };
+		AD01A58317E679C900DAD39A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AD01A58417E679C900DAD39A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		AD01A58717E679C900DAD39A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		AD01A58917E679C900DAD39A /* ViewController.h */ = {isa = PBXFileReference; path = ViewController.h; sourceTree = "<group>"; };
+		AD01A58917E679C900DAD39A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		AD01A58A17E679C900DAD39A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		AD4CFB4517FFDB9D00A4A0D6 /* buttonImage_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonImage_1.png; sourceTree = "<group>"; };
+		AD9B8DCD1804EAF500F2F8A2 /* small-sunflower.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "small-sunflower.png"; sourceTree = "<group>"; };
+		AD9B8DCF180645F700F2F8A2 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		AD9D3DB417FA694D004AC30A /* BGSets.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = BGSets.plist; sourceTree = "<group>"; };
+		AD9D3DB617FBAE01004AC30A /* clouds_water.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = clouds_water.jpg; sourceTree = "<group>"; };
+		ADB20B37182F4286009800D8 /* MotivateMe-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "MotivateMe-Info.plist"; sourceTree = "<group>"; };
+		ADF540DB17ED544300D8945B /* QuoteList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = QuoteList.plist; sourceTree = "<group>"; };
+		ADF540E317F6827800D8945B /* rainbow.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = rainbow.jpg; sourceTree = "<group>"; };
+		ADF540E417F6827800D8945B /* sunrise.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sunrise.jpg; sourceTree = "<group>"; };
+		ADF540E517F6827800D8945B /* two_birds_flying.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = two_birds_flying.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD9B8DD0180645F700F2F8A2 /* Social.framework in Frameworks */,
 				AD01A57517E679C900DAD39A /* UIKit.framework in Frameworks */,
 				AD01A57717E679C900DAD39A /* Foundation.framework in Frameworks */,
 				AD01A57917E679C900DAD39A /* CoreGraphics.framework in Frameworks */,
@@ -59,7 +79,7 @@
 		AD01A57117E679C900DAD39A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AD01A57017E679C900DAD39A /* GoodMorning.app */,
+				AD01A57017E679C900DAD39A /* MotivateMe.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -67,6 +87,7 @@
 		AD01A57317E679C900DAD39A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AD9B8DCF180645F700F2F8A2 /* Social.framework */,
 				AD01A57417E679C900DAD39A /* UIKit.framework */,
 				AD01A57617E679C900DAD39A /* Foundation.framework */,
 				AD01A57817E679C900DAD39A /* CoreGraphics.framework */,
@@ -77,11 +98,13 @@
 		AD01A57A17E679C900DAD39A /* GoodMorning */ = {
 			isa = PBXGroup;
 			children = (
+				AD9B8DD118064EA100F2F8A2 /* iPad */,
 				AD01A58317E679C900DAD39A /* AppDelegate.h */,
 				AD01A58417E679C900DAD39A /* AppDelegate.m */,
 				AD01A58617E679C900DAD39A /* MainStoryboard.storyboard */,
 				AD01A58917E679C900DAD39A /* ViewController.h */,
 				AD01A58A17E679C900DAD39A /* ViewController.m */,
+				ADF540DB17ED544300D8945B /* QuoteList.plist */,
 				AD01A57B17E679C900DAD39A /* Supporting Files */,
 			);
 			path = GoodMorning;
@@ -90,20 +113,34 @@
 		AD01A57B17E679C900DAD39A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				AD01A57C17E679C900DAD39A /* GoodMorning-Info.plist */,
+				ADF540E317F6827800D8945B /* rainbow.jpg */,
+				AD9D3DB617FBAE01004AC30A /* clouds_water.jpg */,
+				AD4CFB4517FFDB9D00A4A0D6 /* buttonImage_1.png */,
+				ADF540E417F6827800D8945B /* sunrise.jpg */,
+				AD9B8DCD1804EAF500F2F8A2 /* small-sunflower.png */,
+				ADF540E517F6827800D8945B /* two_birds_flying.jpg */,
+				ADB20B37182F4286009800D8 /* MotivateMe-Info.plist */,
+				AD9D3DB417FA694D004AC30A /* BGSets.plist */,
 				AD01A57D17E679C900DAD39A /* InfoPlist.strings */,
 				AD01A58017E679C900DAD39A /* main.m */,
-				AD01A58217E679C900DAD39A /* GoodMorning-Prefix.pch */,
+				AD01A58217E679C900DAD39A /* MotivateMe-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AD9B8DD118064EA100F2F8A2 /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = iPad;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		AD01A56F17E679C900DAD39A /* GoodMorning */ = {
+		AD01A56F17E679C900DAD39A /* MotivateMe */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AD01A58E17E679C900DAD39A /* Build configuration list for PBXNativeTarget "GoodMorning" */;
+			buildConfigurationList = AD01A58E17E679C900DAD39A /* Build configuration list for PBXNativeTarget "MotivateMe" */;
 			buildPhases = (
 				AD01A56C17E679C900DAD39A /* Sources */,
 				AD01A56D17E679C900DAD39A /* Frameworks */,
@@ -113,9 +150,9 @@
 			);
 			dependencies = (
 			);
-			name = GoodMorning;
+			name = MotivateMe;
 			productName = GoodMorning;
-			productReference = AD01A57017E679C900DAD39A /* GoodMorning.app */;
+			productReference = AD01A57017E679C900DAD39A /* MotivateMe.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -125,8 +162,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0420;
+				TargetAttributes = {
+					AD01A56F17E679C900DAD39A = {
+						DevelopmentTeam = B66JTZQ2LV;
+					};
+				};
 			};
-			buildConfigurationList = AD01A56A17E679C900DAD39A /* Build configuration list for PBXProject "GoodMorning" */;
+			buildConfigurationList = AD01A56A17E679C900DAD39A /* Build configuration list for PBXProject "MotivateMe" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -138,7 +180,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AD01A56F17E679C900DAD39A /* GoodMorning */,
+				AD01A56F17E679C900DAD39A /* MotivateMe */,
 			);
 		};
 /* End PBXProject section */
@@ -150,6 +192,15 @@
 			files = (
 				AD01A57F17E679C900DAD39A /* InfoPlist.strings in Resources */,
 				AD01A58817E679C900DAD39A /* MainStoryboard.storyboard in Resources */,
+				AD9D3DB717FBAE01004AC30A /* clouds_water.jpg in Resources */,
+				ADF540DC17ED544300D8945B /* QuoteList.plist in Resources */,
+				ADF540E617F6827800D8945B /* rainbow.jpg in Resources */,
+				ADF540E717F6827800D8945B /* sunrise.jpg in Resources */,
+				AD9D3DB517FA694D004AC30A /* BGSets.plist in Resources */,
+				ADF540E817F6827800D8945B /* two_birds_flying.jpg in Resources */,
+				ADB20B38182F4286009800D8 /* MotivateMe-Info.plist in Resources */,
+				AD9B8DCE1804EAF500F2F8A2 /* small-sunflower.png in Resources */,
+				AD4CFB4617FFDB9D00A4A0D6 /* buttonImage_1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,10 +287,15 @@
 		AD01A58F17E679C900DAD39A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "GoodMorning/GoodMorning-Prefix.pch";
-				INFOPLIST_FILE = "GoodMorning/GoodMorning-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "GoodMorning/MotivateMe-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/GoodMorning/MotivateMe-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = MotivateMe;
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -247,10 +303,15 @@
 		AD01A59017E679C900DAD39A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "GoodMorning/GoodMorning-Prefix.pch";
-				INFOPLIST_FILE = "GoodMorning/GoodMorning-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "GoodMorning/MotivateMe-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/GoodMorning/MotivateMe-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = MotivateMe;
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -258,7 +319,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		AD01A56A17E679C900DAD39A /* Build configuration list for PBXProject "GoodMorning" */ = {
+		AD01A56A17E679C900DAD39A /* Build configuration list for PBXProject "MotivateMe" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AD01A58C17E679C900DAD39A /* Debug */,
@@ -267,13 +328,14 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AD01A58E17E679C900DAD39A /* Build configuration list for PBXNativeTarget "GoodMorning" */ = {
+		AD01A58E17E679C900DAD39A /* Build configuration list for PBXNativeTarget "MotivateMe" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AD01A58F17E679C900DAD39A /* Debug */,
 				AD01A59017E679C900DAD39A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
