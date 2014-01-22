@@ -16,11 +16,14 @@
 		AD01A58817E679C900DAD39A /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD01A58617E679C900DAD39A /* MainStoryboard.storyboard */; };
 		AD01A58B17E679C900DAD39A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD01A58A17E679C900DAD39A /* ViewController.m */; };
 		AD4CFB4617FFDB9D00A4A0D6 /* buttonImage_1.png in Resources */ = {isa = PBXBuildFile; fileRef = AD4CFB4517FFDB9D00A4A0D6 /* buttonImage_1.png */; };
+		AD959FCA188CC8FA000F3E3A /* sun_favorites.png in Resources */ = {isa = PBXBuildFile; fileRef = AD959FC9188CC8FA000F3E3A /* sun_favorites.png */; };
+		AD959FCD188F6C7D000F3E3A /* SSFavoriteViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AD959FCC188F6C7D000F3E3A /* SSFavoriteViewDelegate.m */; };
+		AD959FCF188F7B54000F3E3A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD959FCE188F7B54000F3E3A /* Default-568h@2x.png */; };
+		AD959FD218908D9E000F3E3A /* SSArchiveFavorites.m in Sources */ = {isa = PBXBuildFile; fileRef = AD959FD118908D9E000F3E3A /* SSArchiveFavorites.m */; };
 		AD9B8DCE1804EAF500F2F8A2 /* small-sunflower.png in Resources */ = {isa = PBXBuildFile; fileRef = AD9B8DCD1804EAF500F2F8A2 /* small-sunflower.png */; };
 		AD9B8DD0180645F700F2F8A2 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD9B8DCF180645F700F2F8A2 /* Social.framework */; };
 		AD9D3DB517FA694D004AC30A /* BGSets.plist in Resources */ = {isa = PBXBuildFile; fileRef = AD9D3DB417FA694D004AC30A /* BGSets.plist */; };
 		AD9D3DB717FBAE01004AC30A /* clouds_water.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AD9D3DB617FBAE01004AC30A /* clouds_water.jpg */; };
-		ADB20B38182F4286009800D8 /* MotivateMe-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ADB20B37182F4286009800D8 /* MotivateMe-Info.plist */; };
 		ADF540DC17ED544300D8945B /* QuoteList.plist in Resources */ = {isa = PBXBuildFile; fileRef = ADF540DB17ED544300D8945B /* QuoteList.plist */; };
 		ADF540E617F6827800D8945B /* rainbow.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ADF540E317F6827800D8945B /* rainbow.jpg */; };
 		ADF540E717F6827800D8945B /* sunrise.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ADF540E417F6827800D8945B /* sunrise.jpg */; };
@@ -41,6 +44,12 @@
 		AD01A58917E679C900DAD39A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		AD01A58A17E679C900DAD39A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		AD4CFB4517FFDB9D00A4A0D6 /* buttonImage_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonImage_1.png; sourceTree = "<group>"; };
+		AD959FC9188CC8FA000F3E3A /* sun_favorites.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sun_favorites.png; sourceTree = "<group>"; };
+		AD959FCB188F6C7D000F3E3A /* SSFavoriteViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSFavoriteViewDelegate.h; sourceTree = "<group>"; };
+		AD959FCC188F6C7D000F3E3A /* SSFavoriteViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSFavoriteViewDelegate.m; sourceTree = "<group>"; };
+		AD959FCE188F7B54000F3E3A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		AD959FD018908D9E000F3E3A /* SSArchiveFavorites.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSArchiveFavorites.h; sourceTree = "<group>"; };
+		AD959FD118908D9E000F3E3A /* SSArchiveFavorites.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSArchiveFavorites.m; sourceTree = "<group>"; };
 		AD9B8DCD1804EAF500F2F8A2 /* small-sunflower.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "small-sunflower.png"; sourceTree = "<group>"; };
 		AD9B8DCF180645F700F2F8A2 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		AD9D3DB417FA694D004AC30A /* BGSets.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = BGSets.plist; sourceTree = "<group>"; };
@@ -70,6 +79,7 @@
 		AD01A56517E679C900DAD39A = {
 			isa = PBXGroup;
 			children = (
+				AD959FCE188F7B54000F3E3A /* Default-568h@2x.png */,
 				AD01A57A17E679C900DAD39A /* GoodMorning */,
 				AD01A57317E679C900DAD39A /* Frameworks */,
 				AD01A57117E679C900DAD39A /* Products */,
@@ -104,7 +114,10 @@
 				AD01A58617E679C900DAD39A /* MainStoryboard.storyboard */,
 				AD01A58917E679C900DAD39A /* ViewController.h */,
 				AD01A58A17E679C900DAD39A /* ViewController.m */,
-				ADF540DB17ED544300D8945B /* QuoteList.plist */,
+				AD959FCB188F6C7D000F3E3A /* SSFavoriteViewDelegate.h */,
+				AD959FCC188F6C7D000F3E3A /* SSFavoriteViewDelegate.m */,
+				AD959FD018908D9E000F3E3A /* SSArchiveFavorites.h */,
+				AD959FD118908D9E000F3E3A /* SSArchiveFavorites.m */,
 				AD01A57B17E679C900DAD39A /* Supporting Files */,
 			);
 			path = GoodMorning;
@@ -113,6 +126,7 @@
 		AD01A57B17E679C900DAD39A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				AD959FC9188CC8FA000F3E3A /* sun_favorites.png */,
 				ADF540E317F6827800D8945B /* rainbow.jpg */,
 				AD9D3DB617FBAE01004AC30A /* clouds_water.jpg */,
 				AD4CFB4517FFDB9D00A4A0D6 /* buttonImage_1.png */,
@@ -121,6 +135,7 @@
 				ADF540E517F6827800D8945B /* two_birds_flying.jpg */,
 				ADB20B37182F4286009800D8 /* MotivateMe-Info.plist */,
 				AD9D3DB417FA694D004AC30A /* BGSets.plist */,
+				ADF540DB17ED544300D8945B /* QuoteList.plist */,
 				AD01A57D17E679C900DAD39A /* InfoPlist.strings */,
 				AD01A58017E679C900DAD39A /* main.m */,
 				AD01A58217E679C900DAD39A /* MotivateMe-Prefix.pch */,
@@ -190,6 +205,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD959FCA188CC8FA000F3E3A /* sun_favorites.png in Resources */,
 				AD01A57F17E679C900DAD39A /* InfoPlist.strings in Resources */,
 				AD01A58817E679C900DAD39A /* MainStoryboard.storyboard in Resources */,
 				AD9D3DB717FBAE01004AC30A /* clouds_water.jpg in Resources */,
@@ -198,7 +214,7 @@
 				ADF540E717F6827800D8945B /* sunrise.jpg in Resources */,
 				AD9D3DB517FA694D004AC30A /* BGSets.plist in Resources */,
 				ADF540E817F6827800D8945B /* two_birds_flying.jpg in Resources */,
-				ADB20B38182F4286009800D8 /* MotivateMe-Info.plist in Resources */,
+				AD959FCF188F7B54000F3E3A /* Default-568h@2x.png in Resources */,
 				AD9B8DCE1804EAF500F2F8A2 /* small-sunflower.png in Resources */,
 				AD4CFB4617FFDB9D00A4A0D6 /* buttonImage_1.png in Resources */,
 			);
@@ -214,6 +230,8 @@
 				AD01A58117E679C900DAD39A /* main.m in Sources */,
 				AD01A58517E679C900DAD39A /* AppDelegate.m in Sources */,
 				AD01A58B17E679C900DAD39A /* ViewController.m in Sources */,
+				AD959FD218908D9E000F3E3A /* SSArchiveFavorites.m in Sources */,
+				AD959FCD188F6C7D000F3E3A /* SSFavoriteViewDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,7 +313,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = MotivateMe;
 				PROVISIONING_PROFILE = "";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -311,7 +329,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = MotivateMe;
 				PROVISIONING_PROFILE = "";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
