@@ -28,8 +28,17 @@
     _archiveData=[[SSArchiveFavorites alloc]init];
     
     if([_archiveData loadSavedData] !=nil){
-        //    NSLog(@"storedData:::%@",(NSString *)storedData);
+        
+        NSLog(@"saved data is not nill");
+        
         _favoriteQuotes=[_archiveData loadSavedData];
+        
+        for(NSString *storedString in _favoriteQuotes){
+            
+            NSLog(@"saved quote:::::::,%@",storedString);
+            
+        }
+        
     }
    // load quotes and BGSets dictionary from plist
     NSString *QuoteFile = [[NSBundle mainBundle] pathForResource:@"QuoteList" ofType:@"plist"];
@@ -200,7 +209,6 @@
         //      Make instance of tableview  standalone/independent
         _MyTableView = [[UITableView alloc] initWithFrame:self.view.bounds ];
         
-        
         // Instantiate custom delegate standalone class
         SSFavoriteViewDelegate *delegateClass = [[SSFavoriteViewDelegate alloc] init];
         // assign to property to avoid bad memory access.
@@ -218,7 +226,10 @@
         
         _initialController = [[UIViewController alloc] initWithNibName:@"initialController" bundle:nil];
         
+        
         _initialController.navigationItem.title = @"My Favorites";
+        
+        
         
         UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back"
                                                                        style:UIBarButtonItemStylePlain target:self action:@selector(goback) ];
@@ -228,16 +239,16 @@
         _initialController.view =_MyTableView;
         
         
-        
         [self setEditing:NO animated:YES];
         
         
         
-        _navigationController = [[UINavigationController alloc]initWithRootViewController:_initialController];
+        _myNavigationController = [[UINavigationController alloc]initWithRootViewController:_initialController];
         
-        //      [_navigationController pushViewController:_initialController animated:YES];
         
-        [self.view addSubview:_navigationController.view];
+        
+        
+        [self.view addSubview:_myNavigationController.view];
         //    [self.view addSubview:_initialController.view];
         
     }
@@ -262,7 +273,7 @@
 - (void)goback
 {
     NSLog(@"back button pressed");
-    [_navigationController.view removeFromSuperview];
+    [_myNavigationController.view removeFromSuperview];
     //   [_initialController.view removeFromSuperview];
     
 }

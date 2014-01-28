@@ -15,6 +15,8 @@
     _favoriteQuotesView=tableView;
     _savedQuotesToView=favoritetexts;
     [tableView reloadData];
+    _favoriteQuotesView.tableFooterView = [UIView new];
+    
 }
 
 #pragma mark - Table view data source
@@ -24,7 +26,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    
+    NSLog(@"Number of rows in favorite array, %i",[_savedQuotesToView count]);
     return [_savedQuotesToView count];
 }
 
@@ -39,8 +41,17 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
+    
+    // format label for text..
+    [cell.textLabel setLineBreakMode:NSLineBreakByWordWrapping];
+    cell.textLabel.numberOfLines = 0;
+    [cell.textLabel setFont:[UIFont fontWithName:@"HelveticaNeue" size:12]];
+    cell.textLabel.textColor= [UIColor redColor];
+    
     // Configure the cell... setting the text of our cell's label
     cell.textLabel.text = [_savedQuotesToView objectAtIndex:indexPath.row];
+    
+    
     return cell;
 }
 
@@ -79,5 +90,19 @@
         
     }
 }
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSString *cellText    = [_savedQuotesToView objectAtIndex:indexPath.row];
+    //   UIFont *cellFont      = [UIFont fontWithName:@"HelveticaNeue" size:21.0];
+    CGSize constraintSize = CGSizeMake(280.0f, MAXFLOAT);
+    
+    NSDictionary *attributes = @{NSFontAttributeName: [UIFont fontWithName:@"HelveticaNeue" size:14]};
+    
+    CGSize labelSize = [cellText  boundingRectWithSize:constraintSize options:NSStringDrawingUsesLineFragmentOrigin attributes:attributes context:nil].size;
+    
+    int buffer  = 10;
+    return labelSize.height + buffer;
+}
+
 
 @end

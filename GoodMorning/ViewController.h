@@ -32,7 +32,7 @@
 @property (strong, nonatomic) SSFavoriteViewDelegate *myDelegate;
 
 
-@property(strong, nonatomic) UINavigationController *navigationController;
+@property(strong, nonatomic) UINavigationController *myNavigationController;
 
 @property(strong, nonatomic) UIViewController *initialController;
 
