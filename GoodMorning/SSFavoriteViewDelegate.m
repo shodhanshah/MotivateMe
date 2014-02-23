@@ -47,6 +47,7 @@
     cell.textLabel.numberOfLines = 0;
     [cell.textLabel setFont:[UIFont fontWithName:@"HelveticaNeue" size:12]];
     cell.textLabel.textColor= [UIColor redColor];
+    cell.textLabel.textAlignment=NSTextAlignmentCenter;
     
     // Configure the cell... setting the text of our cell's label
     cell.textLabel.text = [_savedQuotesToView objectAtIndex:indexPath.row];
