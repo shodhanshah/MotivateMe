@@ -61,6 +61,8 @@
     NSString *BGImageName=[self getTodayImage];
     UIImage *img = [UIImage imageNamed:BGImageName];
     [self.BackGround setImage:img];
+    
+     _todayQuote=self.quoteDictionary[self.todayEndDigit];
 }
 
 - (void)viewDidUnload
@@ -104,7 +106,7 @@
     
 - (IBAction)TouchAndHold:(UILongPressGestureRecognizer*)sender {
     
-     _todayQuote=self.quoteDictionary[self.todayEndDigit];
+  //   _todayQuote=self.quoteDictionary[self.todayEndDigit];
     
     if (sender.state == UIGestureRecognizerStateBegan           ) {
        self.quoteLable.alpha=0;
