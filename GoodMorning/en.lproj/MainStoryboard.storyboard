@@ -27,7 +27,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="129" id="hAL-Zm-l6X"/>
+                                    <constraint firstAttribute="height" constant="129" id="oHS-jC-sab"/>
                                 </constraints>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="5CQ-lG-57g" appends="YES" id="guD-g8-hXV"/>
@@ -40,28 +40,29 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xP6-Qt-Cxe">
-                                <rect key="frame" x="262" y="482" width="38" height="48"/>
+                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xP6-Qt-Cxe">
+                                <rect key="frame" x="269" y="498" width="31" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="38" id="E2f-1c-2KG"/>
-                                    <constraint firstAttribute="height" constant="48" id="TAJ-97-a9T"/>
+                                    <constraint firstAttribute="height" constant="32" id="HZA-7k-dXO"/>
+                                    <constraint firstAttribute="width" constant="31" id="u61-MI-Bqn"/>
                                 </constraints>
-                                <state key="normal" title="Share" image="small-sunflower"/>
+                                <state key="normal" image="share"/>
                                 <connections>
                                     <action selector="TouchDownShare:" destination="2" eventType="touchDown" id="dUq-J0-7ZL"/>
                                 </connections>
                             </button>
-                            <button contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fef-7X-gZz">
-                                <rect key="frame" x="250" y="42" width="50" height="50"/>
+                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fef-7X-gZz">
+                                <rect key="frame" x="20" y="505" width="31" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="3dW-ya-YMH"/>
-                                    <constraint firstAttribute="width" constant="50" id="MpJ-EC-4Gq"/>
+                                    <constraint firstAttribute="width" constant="31" id="7Of-6k-2h0"/>
+                                    <constraint firstAttribute="height" constant="33" id="FB1-Em-nQr"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <state key="normal" title="favoriteBtn" image="sun_favorites">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="☆">
+                                    <color key="titleColor" red="0.95522673229999999" green="0.12896438020000001" blue="0.16275894660000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="showFavoritePopUp:" destination="2" eventType="touchDown" id="LkK-tE-pJb"/>
@@ -72,19 +73,19 @@
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="HnO-Ez-y5r" secondAttribute="trailing" id="041-1D-kDs"/>
+                            <constraint firstItem="YPn-7u-Xqg" firstAttribute="top" secondItem="xP6-Qt-Cxe" secondAttribute="bottom" constant="38" id="3fx-Qh-MD4"/>
                             <constraint firstItem="EFQ-v6-sU5" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" id="8AV-HV-bFa"/>
-                            <constraint firstItem="EFQ-v6-sU5" firstAttribute="top" secondItem="fef-7X-gZz" secondAttribute="bottom" constant="55" id="A0S-VN-8k4"/>
-                            <constraint firstItem="VVE-yn-AOL" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="95" id="BBV-wE-Bm6"/>
+                            <constraint firstAttribute="trailing" secondItem="VVE-yn-AOL" secondAttribute="trailing" constant="96" id="BGR-8S-XRx"/>
                             <constraint firstItem="YPn-7u-Xqg" firstAttribute="top" secondItem="HnO-Ez-y5r" secondAttribute="bottom" id="Fez-d4-9fF"/>
+                            <constraint firstAttribute="trailing" secondItem="xP6-Qt-Cxe" secondAttribute="trailing" constant="20" symbolic="YES" id="Hsf-Ue-URh"/>
                             <constraint firstItem="EFQ-v6-sU5" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="39" id="KWs-jl-KAb"/>
-                            <constraint firstItem="fef-7X-gZz" firstAttribute="top" secondItem="q7R-IL-nMe" secondAttribute="bottom" constant="22" id="R3k-hA-Aea"/>
-                            <constraint firstItem="xP6-Qt-Cxe" firstAttribute="leading" secondItem="VVE-yn-AOL" secondAttribute="trailing" constant="38" id="RTX-FG-0cC"/>
-                            <constraint firstItem="YPn-7u-Xqg" firstAttribute="top" secondItem="VVE-yn-AOL" secondAttribute="bottom" constant="79" id="XX6-Uy-i8b"/>
+                            <constraint firstItem="fef-7X-gZz" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" id="TkY-jf-PcU"/>
+                            <constraint firstItem="VVE-yn-AOL" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="95" id="WSa-RM-kzw"/>
                             <constraint firstItem="HnO-Ez-y5r" firstAttribute="top" secondItem="3" secondAttribute="top" id="ZRf-Gg-Utd"/>
+                            <constraint firstItem="EFQ-v6-sU5" firstAttribute="top" secondItem="q7R-IL-nMe" secondAttribute="bottom" constant="127" id="fbH-5x-q9r"/>
                             <constraint firstItem="HnO-Ez-y5r" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="-5" id="iJc-Ep-mST"/>
-                            <constraint firstItem="YPn-7u-Xqg" firstAttribute="top" secondItem="xP6-Qt-Cxe" secondAttribute="bottom" constant="38" id="l0A-YW-w3n"/>
-                            <constraint firstAttribute="trailing" secondItem="fef-7X-gZz" secondAttribute="trailing" constant="20" symbolic="YES" id="v0x-Em-lrr"/>
-                            <constraint firstItem="fef-7X-gZz" firstAttribute="trailing" secondItem="xP6-Qt-Cxe" secondAttribute="trailing" id="xkp-o4-PD7"/>
+                            <constraint firstItem="YPn-7u-Xqg" firstAttribute="top" secondItem="VVE-yn-AOL" secondAttribute="bottom" constant="79" id="jfn-sh-Oqj"/>
+                            <constraint firstItem="YPn-7u-Xqg" firstAttribute="top" secondItem="fef-7X-gZz" secondAttribute="bottom" constant="30" id="xvI-Aq-Bu1"/>
                         </constraints>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
@@ -105,8 +106,7 @@
     </scenes>
     <resources>
         <image name="buttonImage_1" width="300" height="300"/>
-        <image name="small-sunflower" width="400" height="398"/>
-        <image name="sun_favorites" width="400" height="400"/>
+        <image name="share" width="30" height="30"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
