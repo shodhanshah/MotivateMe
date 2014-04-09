@@ -78,6 +78,10 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    self.alert = [[UIAlertView alloc] initWithTitle:@"Manage Favorites" message:@"" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Add to favorites", @"Show favorites", nil];
+ //   [alert show];
+    
+    
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -142,10 +146,10 @@
 - (IBAction)TouchDownShare:(id)sender {
      NSLog(@"Share touch down:");
     
-   NSString *shareString = _todayQuote;
-    NSURL *shareUrl = [NSURL URLWithString:@"http://itunes.apple.com/us/app/id284417350?mt=8"];
+   _shareString = _todayQuote;
+    _shareUrl = [NSURL URLWithString:@"http://itunes.apple.com/us/app/id284417350?mt=8"];
     
-    NSArray *myActivityItems = [NSArray arrayWithObjects:shareUrl, shareString, nil];
+    NSArray *myActivityItems = [NSArray arrayWithObjects:_shareUrl, _shareString, nil];
     
     UIActivityViewController *myActivityViewController = [[UIActivityViewController alloc] initWithActivityItems:myActivityItems applicationActivities:nil];
     
@@ -184,8 +188,12 @@
 
 
 - (IBAction)showFavoritePopUp:(UIButton *)sender {
-    UIAlertView  *alert = [[UIAlertView alloc] initWithTitle:@"Manage Favorites" message:@"" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Add to favorites", @"Show favorites", nil];
-    [alert show];
+//    UIAlertView  *alert = [[UIAlertView alloc] initWithTitle:@"Manage Favorites" message:@"" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Add to favorites", @"Show favorites", nil];
+    [self viewWillAppear:YES];
+    [self.alert show];
+    
+    
+    
 }
 
 

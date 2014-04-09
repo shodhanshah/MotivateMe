@@ -36,6 +36,12 @@
 
 @property(strong, nonatomic) UIViewController *initialController;
 
+// added lately
+
+
+@property(strong, nonatomic) UIAlertView * alert;
+@property(strong, nonatomic) NSString * shareString;
+@property(strong, nonatomic) NSURL * shareUrl;
 
 #pragma mark IBAction
 - (IBAction)TouchAndHold:(UIImageView *)sender;

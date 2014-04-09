@@ -26,7 +26,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    NSLog(@"Number of rows in favorite array, %i",[_savedQuotesToView count]);
+    NSLog(@"Number of rows in favorite array, %lu",(unsigned long)[_savedQuotesToView count]);
     return [_savedQuotesToView count];
 }
 
@@ -101,7 +101,7 @@
     
     CGSize labelSize = [cellText  boundingRectWithSize:constraintSize options:NSStringDrawingUsesLineFragmentOrigin attributes:attributes context:nil].size;
     
-    int buffer  = 10;
+    int32_t buffer  = 10;
     return labelSize.height + buffer;
 }
 
