@@ -3,14 +3,14 @@
 <plist version="1.0">
 <dict>
 	<key>0,5</key>
-	<string>rainbow</string>
+	<string>ocean_sunrise</string>
 	<key>1,6</key>
-	<string>two_birds_flying</string>
+	<string>sunrise_sd</string>
 	<key>2,7</key>
 	<string>MountainLake_1</string>
 	<key>3,8</key>
-	<string>sunrise</string>
+	<string>sky_field</string>
 	<key>4,9</key>
-	<string>clouds_water</string>
+	<string>sunset_ocean</string>
 </dict>
 </plist>

@@ -45,8 +45,17 @@
     // format label for text..
     [cell.textLabel setLineBreakMode:NSLineBreakByWordWrapping];
     cell.textLabel.numberOfLines = 0;
-    [cell.textLabel setFont:[UIFont fontWithName:@"HelveticaNeue" size:12]];
-    cell.textLabel.textColor= [UIColor redColor];
+    [cell.textLabel setFont:[UIFont fontWithName:@"HelveticaNeue" size:16]];
+    
+ //   if (!_colorView) {
+ //       _colorView= [[UIView alloc]init];
+   //     [_colorView setBackgroundColor:[UIColor blueColor]];
+   //     }
+  //      cell.selectedBackgroundView=_colorView;
+    
+ //   [cell.textLabel setBackgroundColor:[UIColor blueColor]];
+    cell.contentView.backgroundColor = [UIColor colorWithRed: (30.0/255.0) green: (144.0/255.0) blue: (255.0/255.0) alpha: 1.0];
+    cell.textLabel.textColor= [UIColor whiteColor];
     cell.textLabel.textAlignment=NSTextAlignmentCenter;
     
     // Configure the cell... setting the text of our cell's label
@@ -97,7 +106,7 @@
     //   UIFont *cellFont      = [UIFont fontWithName:@"HelveticaNeue" size:21.0];
     CGSize constraintSize = CGSizeMake(280.0f, MAXFLOAT);
     
-    NSDictionary *attributes = @{NSFontAttributeName: [UIFont fontWithName:@"HelveticaNeue" size:14]};
+    NSDictionary *attributes = @{NSFontAttributeName: [UIFont fontWithName:@"HelveticaNeue" size:16]};
     
     CGSize labelSize = [cellText  boundingRectWithSize:constraintSize options:NSStringDrawingUsesLineFragmentOrigin attributes:attributes context:nil].size;
     

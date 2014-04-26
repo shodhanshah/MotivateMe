@@ -17,4 +17,6 @@
 - (void)loadview:(UITableView *) mytblView favoriteTextArray:(NSMutableArray *)savedQuotes;
 
 @property(strong,nonatomic) SSArchiveFavorites *dataArchiver;
+
+
 @end

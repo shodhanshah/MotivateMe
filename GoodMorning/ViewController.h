@@ -42,6 +42,7 @@
 @property(strong, nonatomic) UIAlertView * alert;
 @property(strong, nonatomic) NSString * shareString;
 @property(strong, nonatomic) NSURL * shareUrl;
+@property(strong, nonatomic) UIAlertView *statusAlert;
 
 #pragma mark IBAction
 - (IBAction)TouchAndHold:(UIImageView *)sender;

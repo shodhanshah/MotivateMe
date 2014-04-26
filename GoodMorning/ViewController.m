@@ -209,8 +209,9 @@
             
         }
         [_archiveData saveSettingsData:_favoriteQuotes];
+    //  faded dialog
         
-        
+        [self showStatus:@"✅ Added to favorites." timeout:1];
         
     }
     else if([title isEqualToString:@"Show favorites"])
@@ -287,4 +288,24 @@
     //   [_initialController.view removeFromSuperview];
     
 }
+
+- (void)showStatus:(NSString *)message timeout:(double)timeout {
+    _statusAlert = [[UIAlertView alloc] initWithTitle:nil
+                                             message:message
+                                            delegate:nil
+                                   cancelButtonTitle:nil
+                                   otherButtonTitles:nil];
+    [_statusAlert show];
+    [NSTimer scheduledTimerWithTimeInterval:timeout
+                                     target:self
+                                   selector:@selector(timerExpired:)
+                                   userInfo:nil
+                                    repeats:NO];
+}
+
+- (void)timerExpired:(NSTimer *)timer {
+    [_statusAlert dismissWithClickedButtonIndex:0 animated:YES];
+}
+
+
 @end
