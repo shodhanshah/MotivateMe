@@ -29,15 +29,15 @@
     
     if([_archiveData loadSavedData] !=nil){
         
-        NSLog(@"saved data is not nill");
+  //      NSLog(@"saved data is not nill");
         
         _favoriteQuotes=[_archiveData loadSavedData];
         
-        for(NSString *storedString in _favoriteQuotes){
+  //      for(NSString *storedString in _favoriteQuotes){
             
-            NSLog(@"saved quote:::::::,%@",storedString);
+  //          NSLog(@"saved quote:::::::,%@",storedString);
             
-        }
+ //       }
         
     }
    // load quotes and BGSets dictionary from plist
@@ -55,7 +55,7 @@
     self.todayEndDigit = [dateFormat stringFromDate:today];
     self.todayEndDigit =[_todayEndDigit substringFromIndex:[_todayEndDigit length] -1 ]  ;
     
-    NSLog(@"%@",self.todayEndDigit);
+//    NSLog(@"%@",self.todayEndDigit);
     
     // set today's image as Background
     NSString *BGImageName=[self getTodayImage];
@@ -144,22 +144,22 @@
 }
 
 - (IBAction)TouchDownShare:(id)sender {
-     NSLog(@"Share touch down:");
+ //    NSLog(@"Share touch down:");
     
    _shareString = _todayQuote;
     _shareUrl = [NSURL URLWithString:@"http://itunes.apple.com/us/app/id284417350?mt=8"];
     
-    NSArray *myActivityItems = [NSArray arrayWithObjects:_shareUrl, _shareString, nil];
+    _myActivityItems = [NSArray arrayWithObjects:_shareUrl, _shareString, nil];
     
-    UIActivityViewController *myActivityViewController = [[UIActivityViewController alloc] initWithActivityItems:myActivityItems applicationActivities:nil];
+    _myActivityViewController = [[UIActivityViewController alloc] initWithActivityItems:_myActivityItems applicationActivities:nil];
     
-    myActivityViewController.excludedActivityTypes=		 @[UIActivityTypePrint , UIActivityTypeCopyToPasteboard, UIActivityTypeAssignToContact, UIActivityTypeSaveToCameraRoll,UIActivityTypeAddToReadingList];
+    _myActivityViewController.excludedActivityTypes=		 @[UIActivityTypePrint , UIActivityTypeCopyToPasteboard, UIActivityTypeAssignToContact, UIActivityTypeSaveToCameraRoll,UIActivityTypeAddToReadingList];
     
     
     
-    myActivityViewController.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
+    _myActivityViewController.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
     
-    [self presentViewController:myActivityViewController animated:YES completion:nil];
+    [self presentViewController:_myActivityViewController animated:YES completion:nil];
     
     
     
@@ -273,17 +273,17 @@
     [_MyTableView setEditing:editing animated:YES];
     if (editing == YES){
         // Change views to edit mode.
-        NSLog(@"in edit mode");
+ //       NSLog(@"in edit mode");
     }
     else {
         // Save the changes if needed and change the views to noneditable.
-        NSLog(@"in non edit mode");
+  //      NSLog(@"in non edit mode");
     }
 }
 
 - (void)goback
 {
-    NSLog(@"back button pressed");
+//    NSLog(@"back button pressed");
     [_myNavigationController.view removeFromSuperview];
     //   [_initialController.view removeFromSuperview];
     

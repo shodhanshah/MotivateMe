@@ -26,7 +26,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    NSLog(@"Number of rows in favorite array, %lu",(unsigned long)[_savedQuotesToView count]);
+//    NSLog(@"Number of rows in favorite array, %lu",(unsigned long)[_savedQuotesToView count]);
     return [_savedQuotesToView count];
 }
 

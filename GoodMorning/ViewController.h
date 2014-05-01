@@ -42,6 +42,9 @@
 @property(strong, nonatomic) UIAlertView * alert;
 @property(strong, nonatomic) NSString * shareString;
 @property(strong, nonatomic) NSURL * shareUrl;
+@property(strong, nonatomic) NSArray *myActivityItems;
+@property(strong, nonatomic) UIActivityViewController *myActivityViewController;
+
 @property(strong, nonatomic) UIAlertView *statusAlert;
 
 #pragma mark IBAction

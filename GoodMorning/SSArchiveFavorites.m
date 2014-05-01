@@ -14,6 +14,7 @@
 - (NSString *) getPath
 {
     NSString* path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+//    NSLog(@"path:::%@",path);
     return [path stringByAppendingPathComponent:@"MyFile.dat"];
 }
 
