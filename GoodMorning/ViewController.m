@@ -21,6 +21,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    NSLog(@"view did load..");
 	// Do any additional setup after loading the view, typically from a nib.
     //Load Dictionary with wood name cross refference values for image name
     
@@ -29,7 +30,7 @@
     
     if([_archiveData loadSavedData] !=nil){
         
-  //      NSLog(@"saved data is not nill");
+        NSLog(@"saved data is not nill");
         
         _favoriteQuotes=[_archiveData loadSavedData];
         
@@ -55,13 +56,15 @@
     self.todayEndDigit = [dateFormat stringFromDate:today];
     self.todayEndDigit =[_todayEndDigit substringFromIndex:[_todayEndDigit length] -1 ]  ;
     
-//    NSLog(@"%@",self.todayEndDigit);
+    NSLog(@"%@",self.todayEndDigit);
     
     // set today's image as Background
     NSString *BGImageName=[self getTodayImage];
     UIImage *img = [UIImage imageNamed:BGImageName];
     [self.BackGround setImage:img];
     
+    NSLog(@"BG image loaded.");
+
      _todayQuote=self.quoteDictionary[self.todayEndDigit];
 }
 
@@ -307,5 +310,53 @@
     [_statusAlert dismissWithClickedButtonIndex:0 animated:YES];
 }
 
+
+//#pragma iAdBanner
+
+
+//#pragma mark - AdViewDelegates
+
+//-(void)bannerView:(ADBannerView *)banner
+//didFailToReceiveAdWithError:(NSError *)error{
+//    NSLog(@"Error loading");
+//    
+////    [UIView beginAnimations:nil context:nil];
+////    [UIView setAnimationDuration:1];
+////    [banner setAlpha:0];
+////    [UIView commitAnimations];
+//    
+//    
+//}
+
+//-(void)bannerViewDidLoadAd:(ADBannerView *)banner{
+//    NSLog(@"Ad loaded");
+//    
+//    NSLog(@"iAd banner Loaded Successfully!");
+//    
+//    
+////    [UIView beginAnimations:nil context:nil];
+////    [UIView setAnimationDuration:1];
+////    [banner setAlpha:1];
+////    [UIView commitAnimations];
+////
+////    [self.view addSubview:banner];
+//    
+////    if (!self.bannerIsVisible)
+////    {
+////        [UIView beginAnimations:@"animateAdBannerOn" context:NULL];
+////        // Assumes the banner view is just off the bottom of the screen.
+////        banner.frame = CGRectOffset(banner.frame, 0, -banner.frame.size.height);
+////        [UIView commitAnimations];
+////        self.bannerIsVisible = YES;
+////    }
+////    
+//}
+//-(void)bannerViewWillLoadAd:(ADBannerView *)banner{
+//    NSLog(@"Ad will load");
+//}
+//-(void)bannerViewActionDidFinish:(ADBannerView *)banner{
+//    NSLog(@"Ad did finish");
+//    
+//}
 
 @end

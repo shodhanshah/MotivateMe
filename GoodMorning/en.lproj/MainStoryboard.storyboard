@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
     <dependencies>
         <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
@@ -41,7 +41,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xP6-Qt-Cxe">
-                                <rect key="frame" x="269" y="498" width="31" height="32"/>
+                                <rect key="frame" x="269" y="468" width="31" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="HZA-7k-dXO"/>
@@ -53,7 +53,7 @@
                                 </connections>
                             </button>
                             <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fef-7X-gZz">
-                                <rect key="frame" x="20" y="505" width="31" height="33"/>
+                                <rect key="frame" x="20" y="475" width="31" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="31" id="7Of-6k-2h0"/>
@@ -73,7 +73,7 @@
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="HnO-Ez-y5r" secondAttribute="trailing" id="041-1D-kDs"/>
-                            <constraint firstItem="YPn-7u-Xqg" firstAttribute="top" secondItem="xP6-Qt-Cxe" secondAttribute="bottom" constant="38" id="3fx-Qh-MD4"/>
+                            <constraint firstItem="YPn-7u-Xqg" firstAttribute="top" secondItem="xP6-Qt-Cxe" secondAttribute="bottom" constant="68" id="3fx-Qh-MD4"/>
                             <constraint firstItem="EFQ-v6-sU5" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" id="8AV-HV-bFa"/>
                             <constraint firstAttribute="trailing" secondItem="VVE-yn-AOL" secondAttribute="trailing" constant="96" id="BGR-8S-XRx"/>
                             <constraint firstItem="YPn-7u-Xqg" firstAttribute="top" secondItem="HnO-Ez-y5r" secondAttribute="bottom" id="Fez-d4-9fF"/>
@@ -85,7 +85,7 @@
                             <constraint firstItem="EFQ-v6-sU5" firstAttribute="top" secondItem="q7R-IL-nMe" secondAttribute="bottom" constant="127" id="fbH-5x-q9r"/>
                             <constraint firstItem="HnO-Ez-y5r" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="-5" id="iJc-Ep-mST"/>
                             <constraint firstItem="YPn-7u-Xqg" firstAttribute="top" secondItem="VVE-yn-AOL" secondAttribute="bottom" constant="79" id="jfn-sh-Oqj"/>
-                            <constraint firstItem="YPn-7u-Xqg" firstAttribute="top" secondItem="fef-7X-gZz" secondAttribute="bottom" constant="30" id="xvI-Aq-Bu1"/>
+                            <constraint firstItem="YPn-7u-Xqg" firstAttribute="top" secondItem="fef-7X-gZz" secondAttribute="bottom" constant="60" id="xvI-Aq-Bu1"/>
                         </constraints>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
