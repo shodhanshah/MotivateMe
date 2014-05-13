@@ -16,6 +16,7 @@
 		AD01A58817E679C900DAD39A /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD01A58617E679C900DAD39A /* MainStoryboard.storyboard */; };
 		AD01A58B17E679C900DAD39A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD01A58A17E679C900DAD39A /* ViewController.m */; };
 		AD26DABD18BD9056001CED3F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD26DABC18BD9056001CED3F /* Images.xcassets */; };
+		AD47CBDD1921675E005E5BF4 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADD17449191C6C1B00C4B6FB /* iAd.framework */; };
 		AD959FCD188F6C7D000F3E3A /* SSFavoriteViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AD959FCC188F6C7D000F3E3A /* SSFavoriteViewDelegate.m */; };
 		AD959FD218908D9E000F3E3A /* SSArchiveFavorites.m in Sources */ = {isa = PBXBuildFile; fileRef = AD959FD118908D9E000F3E3A /* SSArchiveFavorites.m */; };
 		AD9B8DD0180645F700F2F8A2 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD9B8DCF180645F700F2F8A2 /* Social.framework */; };
@@ -64,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD47CBDD1921675E005E5BF4 /* iAd.framework in Frameworks */,
 				ADA6797918D4090A00D17151 /* libz.dylib in Frameworks */,
 				ADA6797818D4087D00D17151 /* libTestFlight.a in Frameworks */,
 				AD9B8DD0180645F700F2F8A2 /* Social.framework in Frameworks */,

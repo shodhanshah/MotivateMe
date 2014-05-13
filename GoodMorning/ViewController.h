@@ -11,9 +11,9 @@
 #import <Social/Social.h>
 #import "SSFavoriteViewDelegate.h"
 #import "SSArchiveFavorites.h"
-//#import <iAd/iAd.h>
+#import <iAd/iAd.h>
 
-@interface ViewController : UIViewController 
+@interface ViewController : UIViewController <ADBannerViewDelegate>
 #pragma mark properties
 @property (strong, nonatomic) IBOutlet UIImageView *BackGround;
 @property (strong, nonatomic) IBOutlet UILabel *quoteLable;
@@ -59,8 +59,8 @@
 -(NSString *) getTodayImage;
 
 //#pragma mark iAdBanner
-//@property (nonatomic)    IBOutlet ADBannerView *topAdBanner;
-//
-//@property (nonatomic) BOOL bannerIsVisible;
+@property (nonatomic)    IBOutlet ADBannerView *topAdBanner;
+
+@property (nonatomic) BOOL bannerIsVisible;
 \
 @end

@@ -68,6 +68,13 @@
                                     <action selector="showFavoritePopUp:" destination="2" eventType="touchDown" id="LkK-tE-pJb"/>
                                 </connections>
                             </button>
+                            <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OfK-hn-GSb">
+                                <rect key="frame" x="-3" y="518" width="320" height="50"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="2" id="sVJ-Vp-F7S"/>
+                                </connections>
+                            </adBannerView>
                         </subviews>
                         <color key="backgroundColor" red="0.78976066214905671" green="1" blue="0.85901224452541625" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
@@ -92,6 +99,7 @@
                     <connections>
                         <outlet property="BackGround" destination="HnO-Ez-y5r" id="P7k-r5-IUa"/>
                         <outlet property="quoteLable" destination="EFQ-v6-sU5" id="yJA-mm-RS7"/>
+                        <outlet property="topAdBanner" destination="OfK-hn-GSb" id="B9m-98-9Ir"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>

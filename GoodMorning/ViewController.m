@@ -22,6 +22,7 @@
 {
     [super viewDidLoad];
     NSLog(@"view did load..");
+    self.bannerIsVisible=NO;
 	// Do any additional setup after loading the view, typically from a nib.
     //Load Dictionary with wood name cross refference values for image name
     
@@ -314,30 +315,32 @@
 //#pragma iAdBanner
 
 
-//#pragma mark - AdViewDelegates
+#pragma mark - AdViewDelegates
 
-//-(void)bannerView:(ADBannerView *)banner
-//didFailToReceiveAdWithError:(NSError *)error{
-//    NSLog(@"Error loading");
-//    
-////    [UIView beginAnimations:nil context:nil];
-////    [UIView setAnimationDuration:1];
-////    [banner setAlpha:0];
-////    [UIView commitAnimations];
-//    
-//    
-//}
+-(void)bannerView:(ADBannerView *)banner
+didFailToReceiveAdWithError:(NSError *)error{
+    NSLog(@"Error loading");
+//    if (self.bannerIsVisible)
+ //   {
+    [UIView beginAnimations:nil context:nil];
+    [UIView setAnimationDuration:1];
+    [banner setAlpha:0];
+    [UIView commitAnimations];
+        self.bannerIsVisible = NO;
+ //   }
+}
 
-//-(void)bannerViewDidLoadAd:(ADBannerView *)banner{
-//    NSLog(@"Ad loaded");
-//    
-//    NSLog(@"iAd banner Loaded Successfully!");
-//    
-//    
-////    [UIView beginAnimations:nil context:nil];
-////    [UIView setAnimationDuration:1];
-////    [banner setAlpha:1];
-////    [UIView commitAnimations];
+-(void)bannerViewDidLoadAd:(ADBannerView *)banner{
+    NSLog(@"Ad loaded");
+    
+//    if (!self.bannerIsVisible)
+ //   {
+    [UIView beginAnimations:@"animateAdBannerOn" context:nil];
+    [UIView setAnimationDuration:1];
+    [banner setAlpha:1];
+    [UIView commitAnimations];
+      self.bannerIsVisible = YES;
+ //   }
 ////
 ////    [self.view addSubview:banner];
 //    
@@ -357,6 +360,6 @@
 //-(void)bannerViewActionDidFinish:(ADBannerView *)banner{
 //    NSLog(@"Ad did finish");
 //    
-//}
+}
 
 @end
