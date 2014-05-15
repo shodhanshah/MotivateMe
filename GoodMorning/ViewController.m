@@ -21,9 +21,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    NSLog(@"view did load..");
-    self.bannerIsVisible=NO;
-	// Do any additional setup after loading the view, typically from a nib.
+    // Do any additional setup after loading the view, typically from a nib.
     //Load Dictionary with wood name cross refference values for image name
     
     _favoriteQuotes=[[NSMutableArray alloc]init];
@@ -35,11 +33,6 @@
         
         _favoriteQuotes=[_archiveData loadSavedData];
         
-  //      for(NSString *storedString in _favoriteQuotes){
-            
-  //          NSLog(@"saved quote:::::::,%@",storedString);
-            
- //       }
         
     }
    // load quotes and BGSets dictionary from plist
@@ -57,7 +50,6 @@
     self.todayEndDigit = [dateFormat stringFromDate:today];
     self.todayEndDigit =[_todayEndDigit substringFromIndex:[_todayEndDigit length] -1 ]  ;
     
-    NSLog(@"%@",self.todayEndDigit);
     
     // set today's image as Background
     NSString *BGImageName=[self getTodayImage];
@@ -67,6 +59,23 @@
     NSLog(@"BG image loaded.");
 
      _todayQuote=self.quoteDictionary[self.todayEndDigit];
+    
+  // Add iAdBanner
+    _adBanner = [[ADBannerView alloc] initWithFrame:CGRectZero];
+    
+    _adBanner.frame = CGRectOffset(_adBanner.frame, 0, self.view.frame.size.height-_adBanner.frame.size.height);
+    
+    [_adBanner setAutoresizingMask:UIViewAutoresizingFlexibleWidth];
+    _adBanner.delegate=self;
+    [_adBanner setAlpha:0];
+    
+    [self.view addSubview:_adBanner];
+    
+    self.bannerIsVisible=NO;
+    
+    NSLog(@"view did load..");
+    
+    
 }
 
 - (void)viewDidUnload
@@ -128,7 +137,6 @@
                          completion:^(BOOL finished){
                          }];
         
-   //     NSLog(@"Long press Began Ended");
     }
     
     if (sender.state == UIGestureRecognizerStateEnded) {
@@ -143,15 +151,13 @@
                          completion:^(BOOL finished){
                          }];
         
- //       NSLog(@"Long press end Ended");
     }
 }
 
 - (IBAction)TouchDownShare:(id)sender {
- //    NSLog(@"Share touch down:");
     
    _shareString = _todayQuote;
-    _shareUrl = [NSURL URLWithString:@"http://itunes.apple.com/us/app/id284417350?mt=8"];
+    _shareUrl = [NSURL URLWithString:@"itms-apps://itunes.apple.com/app/id875145071"];
     
     _myActivityItems = [NSArray arrayWithObjects:_shareUrl, _shareString, nil];
     
@@ -159,15 +165,9 @@
     
     _myActivityViewController.excludedActivityTypes=		 @[UIActivityTypePrint , UIActivityTypeCopyToPasteboard, UIActivityTypeAssignToContact, UIActivityTypeSaveToCameraRoll,UIActivityTypeAddToReadingList];
     
-    
-    
     _myActivityViewController.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
     
     [self presentViewController:_myActivityViewController animated:YES completion:nil];
-    
-    
-    
-    
 }
 
 - (NSString *)getTodayImage {
@@ -192,11 +192,8 @@
 
 
 - (IBAction)showFavoritePopUp:(UIButton *)sender {
-//    UIAlertView  *alert = [[UIAlertView alloc] initWithTitle:@"Manage Favorites" message:@"" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Add to favorites", @"Show favorites", nil];
     [self viewWillAppear:YES];
     [self.alert show];
-    
-    
     
 }
 
@@ -256,12 +253,7 @@
         
         [self setEditing:NO animated:YES];
         
-        
-        
         _myNavigationController = [[UINavigationController alloc]initWithRootViewController:_initialController];
-        
-        
-        
         
         [self.view addSubview:_myNavigationController.view];
         //    [self.view addSubview:_initialController.view];
@@ -287,7 +279,6 @@
 
 - (void)goback
 {
-//    NSLog(@"back button pressed");
     [_myNavigationController.view removeFromSuperview];
     //   [_initialController.view removeFromSuperview];
     
@@ -320,46 +311,33 @@
 -(void)bannerView:(ADBannerView *)banner
 didFailToReceiveAdWithError:(NSError *)error{
     NSLog(@"Error loading");
-//    if (self.bannerIsVisible)
- //   {
-    [UIView beginAnimations:nil context:nil];
+    if (self.bannerIsVisible)
+    {
+    [UIView beginAnimations:@"animateAdBannerOn" context:nil];
     [UIView setAnimationDuration:1];
     [banner setAlpha:0];
     [UIView commitAnimations];
-        self.bannerIsVisible = NO;
- //   }
+    self.bannerIsVisible = NO;
+    }
 }
 
 -(void)bannerViewDidLoadAd:(ADBannerView *)banner{
     NSLog(@"Ad loaded");
     
-//    if (!self.bannerIsVisible)
- //   {
+    if (!self.bannerIsVisible)
+    {
     [UIView beginAnimations:@"animateAdBannerOn" context:nil];
     [UIView setAnimationDuration:1];
     [banner setAlpha:1];
     [UIView commitAnimations];
-      self.bannerIsVisible = YES;
- //   }
-////
-////    [self.view addSubview:banner];
-//    
-////    if (!self.bannerIsVisible)
-////    {
-////        [UIView beginAnimations:@"animateAdBannerOn" context:NULL];
-////        // Assumes the banner view is just off the bottom of the screen.
-////        banner.frame = CGRectOffset(banner.frame, 0, -banner.frame.size.height);
-////        [UIView commitAnimations];
-////        self.bannerIsVisible = YES;
-////    }
-////    
-//}
-//-(void)bannerViewWillLoadAd:(ADBannerView *)banner{
-//    NSLog(@"Ad will load");
-//}
-//-(void)bannerViewActionDidFinish:(ADBannerView *)banner{
-//    NSLog(@"Ad did finish");
-//    
+    self.bannerIsVisible = YES;
+    }
+}
+-(void)bannerViewWillLoadAd:(ADBannerView *)banner{
+    NSLog(@"Ad will load");
+}
+-(void)bannerViewActionDidFinish:(ADBannerView *)banner{
+    NSLog(@"Ad did finish");
 }
 
 @end

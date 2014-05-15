@@ -59,7 +59,7 @@
 -(NSString *) getTodayImage;
 
 //#pragma mark iAdBanner
-@property (nonatomic)    IBOutlet ADBannerView *topAdBanner;
+@property (nonatomic)    IBOutlet ADBannerView *adBanner;
 
 @property (nonatomic) BOOL bannerIsVisible;
 \
