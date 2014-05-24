@@ -43,6 +43,7 @@
 @property(strong, nonatomic) UIAlertView * alert;
 @property(strong, nonatomic) NSString * shareString;
 @property(strong, nonatomic) NSURL * shareUrl;
+@property(strong, nonatomic) UIImage *img;
 @property(strong, nonatomic) NSArray *myActivityItems;
 @property(strong, nonatomic) UIActivityViewController *myActivityViewController;
 
@@ -57,6 +58,9 @@
 
 #pragma mark HelperMethods
 -(NSString *) getTodayImage;
+
+#pragma mark    timer
+@property(strong, nonatomic) NSTimer *myTimer;
 
 //#pragma mark iAdBanner
 @property (nonatomic)    IBOutlet ADBannerView *adBanner;

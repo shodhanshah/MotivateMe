@@ -22,28 +22,19 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    //Load Dictionary with wood name cross refference values for image name
     
-    _favoriteQuotes=[[NSMutableArray alloc]init];
-    _archiveData=[[SSArchiveFavorites alloc]init];
+    self.alert = [[UIAlertView alloc] initWithTitle:@"Manage Favorites" message:@"" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Add to favorites", @"Show favorites", nil];
+    //   [alert show];
     
-    if([_archiveData loadSavedData] !=nil){
-        
-        NSLog(@"saved data is not nill");
-        
-        _favoriteQuotes=[_archiveData loadSavedData];
-        
-        
-    }
-   // load quotes and BGSets dictionary from plist
+    
+    // load quotes and BGSets dictionary from plist
     NSString *QuoteFile = [[NSBundle mainBundle] pathForResource:@"QuoteList" ofType:@"plist"];
     self.quoteDictionary = [[NSDictionary alloc] initWithContentsOfFile:QuoteFile];
-
     
     NSString *BGImagesFile = [[NSBundle mainBundle] pathForResource:@"BGSets" ofType:@"plist"];
     self.BGSetsDictionary = [[NSDictionary alloc] initWithContentsOfFile:BGImagesFile];
     
- // format todays date  to extract last digit
+    // format todays date  to extract last digit
     NSDate *today = [NSDate date];
     NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
     [dateFormat setDateFormat:@"dd"];
@@ -53,29 +44,12 @@
     
     // set today's image as Background
     NSString *BGImageName=[self getTodayImage];
-    UIImage *img = [UIImage imageNamed:BGImageName];
-    [self.BackGround setImage:img];
+    _img = [UIImage imageNamed:BGImageName];
+    [self.BackGround setImage:_img];
     
-    NSLog(@"BG image loaded.");
+//    NSLog(@"BG image loaded.");
 
      _todayQuote=self.quoteDictionary[self.todayEndDigit];
-    
-  // Add iAdBanner
-    _adBanner = [[ADBannerView alloc] initWithFrame:CGRectZero];
-    
-    _adBanner.frame = CGRectOffset(_adBanner.frame, 0, self.view.frame.size.height-_adBanner.frame.size.height);
-    
-    [_adBanner setAutoresizingMask:UIViewAutoresizingFlexibleWidth];
-    _adBanner.delegate=self;
-    [_adBanner setAlpha:0];
-    
-    [self.view addSubview:_adBanner];
-    
-    self.bannerIsVisible=NO;
-    
-    NSLog(@"view did load..");
-    
-    
 }
 
 - (void)viewDidUnload
@@ -91,20 +65,47 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    self.alert = [[UIAlertView alloc] initWithTitle:@"Manage Favorites" message:@"" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Add to favorites", @"Show favorites", nil];
- //   [alert show];
+    _favoriteQuotes=[[NSMutableArray alloc]init];
+    _archiveData=[[SSArchiveFavorites alloc]init];
     
+    if([_archiveData loadSavedData] !=nil){
+        
+        //      NSLog(@"saved data is not nill");
+        
+        _favoriteQuotes=[_archiveData loadSavedData];
+    }
     
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+    // Add iAdBanner
+    _adBanner = [[ADBannerView alloc] initWithFrame:CGRectZero];
+    
+    _adBanner.frame = CGRectOffset(_adBanner.frame, 0, self.view.frame.size.height-_adBanner.frame.size.height);
+    
+    [_adBanner setAutoresizingMask:UIViewAutoresizingFlexibleWidth];
+    _adBanner.delegate=self;
+    [_adBanner setAlpha:0];
+    
+    [self.view addSubview:_adBanner];
+    
+    self.bannerIsVisible=NO;
+    
+    // automate animation
+    
+    _myTimer=   [NSTimer  scheduledTimerWithTimeInterval:0.5 target:self  selector:@selector(animateInWhenLoaded) userInfo:nil repeats:NO];
+    
 }
 
 - (void)viewWillDisappear:(BOOL)animated
 {
 	[super viewWillDisappear:animated];
+    if ([self.myTimer isValid]) {
+        [self.myTimer invalidate];
+    }
+    
 }
 
 - (void)viewDidDisappear:(BOOL)animated
@@ -118,9 +119,35 @@
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
 
+// auto animation
 
-
+-(void)animateInWhenLoaded{
+    self.quoteLable.alpha=0;
+    self.quoteLable.text=_todayQuote;
     
+    [UIView animateWithDuration:5.0
+                        delay:0.1
+                        options: UIViewAnimationOptionCurveEaseIn
+                     animations:^{
+                         self.quoteLable.alpha = 1.0;   // fade in text
+                         self.BackGround.alpha=0.3;//fade out image
+                       }
+                     completion:^(BOOL finished){
+                         [UIView animateWithDuration:5.0
+                          delay: 1.0
+                          options: UIViewAnimationOptionCurveEaseIn
+                          animations:^{
+                              self.quoteLable.alpha = 0.0;   // fade in text
+                             self.BackGround.alpha=1.0;//fade out image
+                        }
+                         completion:^(BOOL finished){
+                          [NSTimer  scheduledTimerWithTimeInterval:0.5 target:self  selector:@selector(animateInWhenLoaded) userInfo:nil repeats:NO];
+                         }
+                          ];
+                     
+                     }];
+    
+}
 - (IBAction)TouchAndHold:(UILongPressGestureRecognizer*)sender {
     
   //   _todayQuote=self.quoteDictionary[self.todayEndDigit];
@@ -155,14 +182,23 @@
 }
 
 - (IBAction)TouchDownShare:(id)sender {
+    NSString *subjectString=@"Today's Affirmation- an iPhone app.";
     
-   _shareString = _todayQuote;
-    _shareUrl = [NSURL URLWithString:@"itms-apps://itunes.apple.com/app/id875145071"];
+   _shareString = @"'Checkout this awesome motivational iPhone app.'\n";
     
-    _myActivityItems = [NSArray arrayWithObjects:_shareUrl, _shareString, nil];
+     NSString *urlString =@"http://bit.ly/1ocZ9r2";
+    
+    _shareUrl = [NSURL URLWithString:urlString];
+    
+    
+    _shareString=[_shareString stringByAppendingString:urlString];
+    
+    
+    _myActivityItems = [NSArray arrayWithObjects:  _shareString,nil, nil];
     
     _myActivityViewController = [[UIActivityViewController alloc] initWithActivityItems:_myActivityItems applicationActivities:nil];
     
+    [_myActivityViewController setValue:subjectString forKey:@"subject"];
     _myActivityViewController.excludedActivityTypes=		 @[UIActivityTypePrint , UIActivityTypeCopyToPasteboard, UIActivityTypeAssignToContact, UIActivityTypeSaveToCameraRoll,UIActivityTypeAddToReadingList];
     
     _myActivityViewController.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
@@ -186,10 +222,6 @@
     return todayImage;
     
 }
-
-
-
-
 
 - (IBAction)showFavoritePopUp:(UIButton *)sender {
     [self viewWillAppear:YES];
@@ -310,7 +342,7 @@
 
 -(void)bannerView:(ADBannerView *)banner
 didFailToReceiveAdWithError:(NSError *)error{
-    NSLog(@"Error loading");
+ //   NSLog(@"Error loading");
     if (self.bannerIsVisible)
     {
     [UIView beginAnimations:@"animateAdBannerOn" context:nil];
@@ -322,7 +354,7 @@ didFailToReceiveAdWithError:(NSError *)error{
 }
 
 -(void)bannerViewDidLoadAd:(ADBannerView *)banner{
-    NSLog(@"Ad loaded");
+ //   NSLog(@"Ad loaded");
     
     if (!self.bannerIsVisible)
     {
@@ -334,10 +366,10 @@ didFailToReceiveAdWithError:(NSError *)error{
     }
 }
 -(void)bannerViewWillLoadAd:(ADBannerView *)banner{
-    NSLog(@"Ad will load");
+ //   NSLog(@"Ad will load");
 }
 -(void)bannerViewActionDidFinish:(ADBannerView *)banner{
-    NSLog(@"Ad did finish");
+//    NSLog(@"Ad did finish");
 }
 
 @end
