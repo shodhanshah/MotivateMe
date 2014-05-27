@@ -38,8 +38,8 @@
     NSDate *today = [NSDate date];
     NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
     [dateFormat setDateFormat:@"dd"];
-    self.todayEndDigit = [dateFormat stringFromDate:today];
-    self.todayEndDigit =[_todayEndDigit substringFromIndex:[_todayEndDigit length] -1 ]  ;
+    self.todayEndDigits = [dateFormat stringFromDate:today];
+    self.todayEndDigit =[_todayEndDigits substringFromIndex:[_todayEndDigits length] -1 ]  ;
     
     
     // set today's image as Background
@@ -49,7 +49,7 @@
     
 //    NSLog(@"BG image loaded.");
 
-     _todayQuote=self.quoteDictionary[self.todayEndDigit];
+     _todayQuote=self.quoteDictionary[self.todayEndDigits];
 }
 
 - (void)viewDidUnload
@@ -126,7 +126,7 @@
     self.quoteLable.text=_todayQuote;
     
     [UIView animateWithDuration:5.0
-                        delay:0.1
+                        delay:1.0
                         options: UIViewAnimationOptionCurveEaseIn
                      animations:^{
                          self.quoteLable.alpha = 1.0;   // fade in text
@@ -148,38 +148,38 @@
                      }];
     
 }
-- (IBAction)TouchAndHold:(UILongPressGestureRecognizer*)sender {
-    
-  //   _todayQuote=self.quoteDictionary[self.todayEndDigit];
-    
-    if (sender.state == UIGestureRecognizerStateBegan           ) {
-       self.quoteLable.alpha=0;
-        self.quoteLable.text=_todayQuote;
-        
-        [UIView animateWithDuration:2.0
-                         animations:^{
-                             self.quoteLable.alpha = 1.0;   // fade out
-                             self.BackGround.alpha=0.3;
-                         }
-                         completion:^(BOOL finished){
-                         }];
-        
-    }
-    
-    if (sender.state == UIGestureRecognizerStateEnded) {
-        
-        
-        [UIView animateWithDuration:3.0
-                         animations:^{
-                             self.quoteLable.alpha = 0.0;   // fade out
-                             
-                             self.BackGround.alpha=1.0;
-                         }
-                         completion:^(BOOL finished){
-                         }];
-        
-    }
-}
+//- (IBAction)TouchAndHold:(UILongPressGestureRecognizer*)sender {
+//    
+//  //   _todayQuote=self.quoteDictionary[self.todayEndDigit];
+//    
+//    if (sender.state == UIGestureRecognizerStateBegan           ) {
+//       self.quoteLable.alpha=0;
+//        self.quoteLable.text=_todayQuote;
+//        
+//        [UIView animateWithDuration:2.0
+//                         animations:^{
+//                             self.quoteLable.alpha = 1.0;   // fade out
+//                             self.BackGround.alpha=0.3;
+//                         }
+//                         completion:^(BOOL finished){
+//                         }];
+//        
+//    }
+//    
+//    if (sender.state == UIGestureRecognizerStateEnded) {
+//        
+//        
+//        [UIView animateWithDuration:3.0
+//                         animations:^{
+//                             self.quoteLable.alpha = 0.0;   // fade out
+//                             
+//                             self.BackGround.alpha=1.0;
+//                         }
+//                         completion:^(BOOL finished){
+//                         }];
+//        
+//    }
+//}
 
 - (IBAction)TouchDownShare:(id)sender {
     NSString *subjectString=@"Today's Affirmation- an iPhone app.";

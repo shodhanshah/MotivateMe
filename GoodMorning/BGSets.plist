@@ -5,12 +5,12 @@
 	<key>0,5</key>
 	<string>MountainLake_1</string>
 	<key>1,6</key>
-	<string>Rainbow-09</string>
-	<key>2,7</key>
 	<string>sunset_ocean</string>
-	<key>3,8</key>
-	<string>ocean_sunrise</string>
-	<key>4,9</key>
+	<key>2,7</key>
 	<string>sky_field</string>
+	<key>3,8</key>
+	<string>Rainbow-09</string>
+	<key>4,9</key>
+	<string>ocean_sunrise</string>
 </dict>
 </plist>

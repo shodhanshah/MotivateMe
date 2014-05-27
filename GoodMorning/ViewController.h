@@ -21,6 +21,7 @@
 @property (strong, nonatomic) NSDictionary *quoteDictionary;
 @property (strong, nonatomic) NSDictionary *BGSetsDictionary;
 
+@property (strong, nonatomic)  NSString *todayEndDigits;
 @property (strong, nonatomic)  NSString *todayEndDigit;
 @property (strong, nonatomic)  NSString *todayQuote;
 #pragma mark Favorite Properties
@@ -50,7 +51,7 @@
 @property(strong, nonatomic) UIAlertView *statusAlert;
 
 #pragma mark IBAction
-- (IBAction)TouchAndHold:(UIImageView *)sender;
+//- (IBAction)TouchAndHold:(UIImageView *)sender;
 - (IBAction)TouchDownShare:(UIButton *)sender;
 
 - (IBAction)showFavoritePopUp:(UIButton *)sender;

@@ -22,17 +22,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                             </imageView>
-                            <imageView opaque="NO" contentMode="scaleAspectFit" image="buttonImage_1" translatesAutoresizingMaskIntoConstraints="NO" id="VVE-yn-AOL">
-                                <rect key="frame" x="95" y="360" width="129" height="129"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <gestureRecognizers/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="129" id="oHS-jC-sab"/>
-                                </constraints>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="5CQ-lG-57g" appends="YES" id="guD-g8-hXV"/>
-                                </connections>
-                            </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="clip" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="242" translatesAutoresizingMaskIntoConstraints="NO" id="EFQ-v6-sU5">
                                 <rect key="frame" x="39" y="147" width="242" height="0.0"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -75,16 +64,13 @@
                             <constraint firstAttribute="trailing" secondItem="HnO-Ez-y5r" secondAttribute="trailing" id="041-1D-kDs"/>
                             <constraint firstItem="YPn-7u-Xqg" firstAttribute="top" secondItem="xP6-Qt-Cxe" secondAttribute="bottom" constant="68" id="3fx-Qh-MD4"/>
                             <constraint firstItem="EFQ-v6-sU5" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" id="8AV-HV-bFa"/>
-                            <constraint firstAttribute="trailing" secondItem="VVE-yn-AOL" secondAttribute="trailing" constant="96" id="BGR-8S-XRx"/>
                             <constraint firstItem="YPn-7u-Xqg" firstAttribute="top" secondItem="HnO-Ez-y5r" secondAttribute="bottom" id="Fez-d4-9fF"/>
                             <constraint firstAttribute="trailing" secondItem="xP6-Qt-Cxe" secondAttribute="trailing" constant="20" symbolic="YES" id="Hsf-Ue-URh"/>
                             <constraint firstItem="EFQ-v6-sU5" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="39" id="KWs-jl-KAb"/>
                             <constraint firstItem="fef-7X-gZz" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" id="TkY-jf-PcU"/>
-                            <constraint firstItem="VVE-yn-AOL" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="95" id="WSa-RM-kzw"/>
                             <constraint firstItem="HnO-Ez-y5r" firstAttribute="top" secondItem="3" secondAttribute="top" id="ZRf-Gg-Utd"/>
                             <constraint firstItem="EFQ-v6-sU5" firstAttribute="top" secondItem="q7R-IL-nMe" secondAttribute="bottom" constant="127" id="fbH-5x-q9r"/>
                             <constraint firstItem="HnO-Ez-y5r" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="-5" id="iJc-Ep-mST"/>
-                            <constraint firstItem="YPn-7u-Xqg" firstAttribute="top" secondItem="VVE-yn-AOL" secondAttribute="bottom" constant="79" id="jfn-sh-Oqj"/>
                             <constraint firstItem="YPn-7u-Xqg" firstAttribute="top" secondItem="fef-7X-gZz" secondAttribute="bottom" constant="60" id="xvI-Aq-Bu1"/>
                         </constraints>
                     </view>
@@ -95,17 +81,12 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
-                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.10000000000000003" id="5CQ-lG-57g">
-                    <connections>
-                        <action selector="TouchAndHold:" destination="2" id="rlQ-GH-PxA"/>
-                    </connections>
-                </pongPressGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.10000000000000003" id="5CQ-lG-57g"/>
             </objects>
             <point key="canvasLocation" x="-1281" y="53"/>
         </scene>
     </scenes>
     <resources>
-        <image name="buttonImage_1" width="300" height="300"/>
         <image name="share" width="30" height="30"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

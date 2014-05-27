@@ -2,26 +2,67 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>0</key>
-	<string>I am in full control of my mind, attitude and thoughts.</string>
-	<key>1</key>
-	<string>If you can not fly, run, if can&apos;t run, walk, if an&apos;t walk, crawl, but keep on what you aredoing.</string>
-	<key>2</key>
-	<string>Keep faith in God. Be positive. Everything will come out right.</string>
-	<key>3</key>
-	<string>I will make today,tomorrow I am proud of.</string>
-	<key>4</key>
-	<string>Today I will be happy and cheerful.</string>
-	<key>5</key>
-	<string>I do not crticize anyone, not advise anyone.</string>
-	<key>6</key>
-	<string>I am responsible.</string>
-	<key>7</key>
-	<string>I am hard working and persistent.
-        </string>
-	<key>8</key>
-	<string>I am in full control of my mind, attitude and thoughts.</string>
-	<key>9</key>
-	<string>I am in full control of my mind, attitude and thoughts.</string>
+	<key>01</key>
+	<string>I avoid arguments.</string>
+	<key>02</key>
+	<string>I do not get angry, no matter what.</string>
+	<key>03</key>
+	<string>I focus on each task with confidence.</string>
+	<key>04</key>
+	<string>Success is my habit.</string>
+	<key>05</key>
+	<string>When I fail, I always look for ways to improve next time.</string>
+	<key>06</key>
+	<string>I start day early and set myself ahead of others.</string>
+	<key>07</key>
+	<string>I do things first which I fear most.</string>
+	<key>08</key>
+	<string>I visualize that all difficulties are small. I can solve them.</string>
+	<key>09</key>
+	<string>I find positive aspects in all my struggles.</string>
+	<key>10</key>
+	<string>My mind is filled with positive and healthy thoughts.</string>
+	<key>11</key>
+	<string>I am interested in my work.</string>
+	<key>12</key>
+	<string>I am hard working and persistent.</string>
+	<key>13</key>
+	<string>Every day I do something to reach my goals.</string>
+	<key>14</key>
+	<string>I always finish my tasks first, and then relax.</string>
+	<key>15</key>
+	<string>I do not put off until tomorrow what I can do today.</string>
+	<key>16</key>
+	<string>I get the things done. That&apos;s it. No excuses.</string>
+	<key>17</key>
+	<string>I take responsibility for everything, and don’t blame anyone.</string>
+	<key>18</key>
+	<string>I forgive myself for all past mistakes.</string>
+	<key>19</key>
+	<string>I do not cry over spilled milk.</string>
+	<key>20</key>
+	<string>Nothing can disturb me.</string>
+	<key>21</key>
+	<string>I do not worry ,no matter what.</string>
+	<key>22</key>
+	<string>I never make issue of small things. I let it go.</string>
+	<key>23</key>
+	<string>I can find my way out of any situation.</string>
+	<key>24</key>
+	<string>I set myself free from the past.</string>
+	<key>25</key>
+	<string>I attack difficulties with courage and confidence.</string>
+	<key>26</key>
+	<string>I refuse to give up because I haven&apos;t tried all possible ways.</string>
+	<key>27</key>
+	<string>I take criticisms positively and use them for self improvement.</string>
+	<key>28</key>
+	<string>I do not criticize, condemn or complain.</string>
+	<key>29</key>
+	<string>I appreciate the good things about other people.</string>
+	<key>30</key>
+	<string>I do not get anxious, no matter what.</string>
+	<key>31</key>
+	<string>I exercise regularly.</string>
 </dict>
 </plist>
