@@ -5,7 +5,6 @@
 //  Created by Shodhan Shah on 9/15/13.
 //  Copyright (c) 2013 __MyCompanyName__. All rights reserved.
 //
-
 #import "ViewController.h"
 
 @implementation ViewController
@@ -14,6 +13,13 @@
 {
     [super didReceiveMemoryWarning];
     // Release any cached data, images, etc that aren't in use.
+    
+    [self setBackGround:nil];
+    [self setQuoteLable:nil];
+    if(self.isViewLoaded && !self.view.window){
+        self.view = nil;
+    }
+    
 }
 
 #pragma mark - View lifecycle
@@ -22,6 +28,29 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    
+    // automate animation
+    NSLog(@"viewDidload called...");
+    
+//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(initBGandQuotes:) name:UIApplicationDidBecomeActiveNotification object:nil];
+    
+    [self initBGandQuotes];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(appEnteredBackGround:) name:UIApplicationDidEnterBackgroundNotification object:nil];
+    
+    [self insertIAdBanner];
+    
+    //   NSLog(@"Timer will start now...");
+    _myTimer=   [NSTimer  scheduledTimerWithTimeInterval:0.25 target:self  selector:@selector(animateInWhenLoaded) userInfo:nil repeats:NO];
+    
+    
+    
+}
+
+-(void)initBGandQuotes{
+  
+    NSLog(@"initBGandQuotes called...");
     
     self.alert = [[UIAlertView alloc] initWithTitle:@"Manage Favorites" message:@"" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Add to favorites", @"Show favorites", nil];
     //   [alert show];
@@ -47,9 +76,58 @@
     _img = [UIImage imageNamed:BGImageName];
     [self.BackGround setImage:_img];
     
-//    NSLog(@"BG image loaded.");
+    //    NSLog(@"BG image loaded.");
+    
+    _todayQuote=self.quoteDictionary[self.todayEndDigits];
+    
+  //  self.quoteDictionary=nil;
+  //  self.BGSetsDictionary=nil;
+    
+}
 
-     _todayQuote=self.quoteDictionary[self.todayEndDigits];
+-(void)insertIAdBanner{
+    // Add iAdBanner
+    _adBanner = [[ADBannerView alloc] initWithFrame:CGRectZero];
+    
+    _adBanner.frame = CGRectOffset(_adBanner.frame, 0, self.view.frame.size.height-_adBanner.frame.size.height);
+    
+    [_adBanner setAutoresizingMask:UIViewAutoresizingFlexibleWidth];
+    _adBanner.delegate=self;
+    [_adBanner setAlpha:0];
+    
+    [self.view addSubview:_adBanner];
+    
+    self.bannerIsVisible=NO;
+    
+    
+}
+
+-(void)loadFavorites{
+    _favoriteQuotes=[[NSMutableArray alloc]init];
+    _archiveData=[[SSArchiveFavorites alloc]init];
+    
+    if([_archiveData loadSavedData] !=nil){
+        
+        //      NSLog(@"saved data is not nill");
+        
+        _favoriteQuotes=[_archiveData loadSavedData];
+    }
+    
+}
+
+
+-(void)appEnteredBackGround:(NSNotification *)notification{
+    
+    NSLog(@"app Entered Background called...");
+ 
+    if([self.alert isVisible]){
+        NSLog(@"alert visible...");
+    [self.alert dismissWithClickedButtonIndex:-1 animated:YES ];
+    }
+    
+    //    [[self presentingViewController] dismissViewControllerAnimated:NO completion:nil];
+ //   [self.BackGround setImage:nil];
+ //   self.quoteLable.text=nil;
 }
 
 - (void)viewDidUnload
@@ -64,38 +142,17 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
+    NSLog(@"viewWillAppear called.....");
     [super viewWillAppear:animated];
-    _favoriteQuotes=[[NSMutableArray alloc]init];
-    _archiveData=[[SSArchiveFavorites alloc]init];
-    
-    if([_archiveData loadSavedData] !=nil){
-        
-        //      NSLog(@"saved data is not nill");
-        
-        _favoriteQuotes=[_archiveData loadSavedData];
-    }
     
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
+    
+    NSLog(@"viewDidAppear called.....");
     [super viewDidAppear:animated];
-    // Add iAdBanner
-    _adBanner = [[ADBannerView alloc] initWithFrame:CGRectZero];
     
-    _adBanner.frame = CGRectOffset(_adBanner.frame, 0, self.view.frame.size.height-_adBanner.frame.size.height);
-    
-    [_adBanner setAutoresizingMask:UIViewAutoresizingFlexibleWidth];
-    _adBanner.delegate=self;
-    [_adBanner setAlpha:0];
-    
-    [self.view addSubview:_adBanner];
-    
-    self.bannerIsVisible=NO;
-    
-    // automate animation
-    
-    _myTimer=   [NSTimer  scheduledTimerWithTimeInterval:0.5 target:self  selector:@selector(animateInWhenLoaded) userInfo:nil repeats:NO];
     
 }
 
@@ -122,6 +179,7 @@
 // auto animation
 
 -(void)animateInWhenLoaded{
+    
     self.quoteLable.alpha=0;
     self.quoteLable.text=_todayQuote;
     
@@ -146,6 +204,7 @@
                           ];
                      
                      }];
+        
     
 }
 //- (IBAction)TouchAndHold:(UILongPressGestureRecognizer*)sender {
@@ -225,6 +284,7 @@
 
 - (IBAction)showFavoritePopUp:(UIButton *)sender {
     [self viewWillAppear:YES];
+    [self loadFavorites];
     [self.alert show];
     
 }
@@ -312,7 +372,8 @@
 - (void)goback
 {
     [_myNavigationController.view removeFromSuperview];
-    //   [_initialController.view removeFromSuperview];
+  //     [_initialController.view removeFromSuperview];
+    
     
 }
 
