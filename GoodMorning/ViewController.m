@@ -31,7 +31,7 @@
     
     
     // automate animation
-    NSLog(@"viewDidload called...");
+ //   NSLog(@"viewDidload called...");
     
 //    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(initBGandQuotes:) name:UIApplicationDidBecomeActiveNotification object:nil];
     
@@ -50,7 +50,7 @@
 
 -(void)initBGandQuotes{
   
-    NSLog(@"initBGandQuotes called...");
+ //   NSLog(@"initBGandQuotes called...");
     
     self.alert = [[UIAlertView alloc] initWithTitle:@"Manage Favorites" message:@"" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Add to favorites", @"Show favorites", nil];
     //   [alert show];
@@ -118,10 +118,10 @@
 
 -(void)appEnteredBackGround:(NSNotification *)notification{
     
-    NSLog(@"app Entered Background called...");
+ //   NSLog(@"app Entered Background called...");
  
     if([self.alert isVisible]){
-        NSLog(@"alert visible...");
+ //       NSLog(@"alert visible...");
     [self.alert dismissWithClickedButtonIndex:-1 animated:YES ];
     }
     
@@ -142,7 +142,7 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    NSLog(@"viewWillAppear called.....");
+ //   NSLog(@"viewWillAppear called.....");
     [super viewWillAppear:animated];
     
 }
@@ -150,7 +150,7 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     
-    NSLog(@"viewDidAppear called.....");
+ //   NSLog(@"viewDidAppear called.....");
     [super viewDidAppear:animated];
     
     
@@ -184,7 +184,7 @@
     self.quoteLable.text=_todayQuote;
     
     [UIView animateWithDuration:5.0
-                        delay:1.0
+                        delay:0.25
                         options: UIViewAnimationOptionCurveEaseIn
                      animations:^{
                          self.quoteLable.alpha = 1.0;   // fade in text
